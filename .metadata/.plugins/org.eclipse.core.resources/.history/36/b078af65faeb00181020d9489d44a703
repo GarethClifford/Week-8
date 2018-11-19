@@ -1,0 +1,17 @@
+import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Testing {
+	
+	WebDriver driver;
+	String url;
+	
+	@Before
+	public void setup() {
+		url = "http://thedemosite.co.uk/";
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+	}
+
+}

@@ -1,0 +1,21 @@
+import org.junit.After;
+import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Testing {
+	
+	WebDriver driver;
+	
+	@Before
+	public void settingUp() {
+		System.setProperty("webdriver.chome.driver","C:\\Users\\Admin\\Downloads\\chromedriver_win32");
+		driver = (WebDriver) new ChromeDriver();
+	}
+	
+	@After
+	public void tearDown() {
+		driver.quit();
+	}
+
+}

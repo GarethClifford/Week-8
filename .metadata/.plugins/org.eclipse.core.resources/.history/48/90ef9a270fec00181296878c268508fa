@@ -1,0 +1,38 @@
+package Test;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+
+import Pages.LandingPage;
+
+public class Testing {
+	
+	WebDriver driver;
+	String url;
+	
+	LandingPage lp;
+	
+	@Before
+	public void setUp() {
+		url = "http://automationpractice.com/index.php";
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		
+	}
+	
+	@After
+	public void tearDown() {
+		driver.quit();
+	}
+	
+	@Test
+	public void landingPageTest() {
+		driver.manage().window().maximize();
+		driver.get(url);
+		lp.searchFor("dress");
+		
+		
+	}
+
+}

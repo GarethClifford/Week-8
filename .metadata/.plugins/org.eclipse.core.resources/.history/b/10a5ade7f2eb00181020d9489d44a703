@@ -1,0 +1,13 @@
+
+
+public class Testing {
+	
+	WebDriver driver;
+	
+	@BeforeClass
+	public void settingUp() {
+		System.setProperty("webdriver.chome.driver","C:\\Users\\Admin\\Downloads\\chromedriver_win32");
+		driver = new ChromeDriver();
+	}
+
+}
